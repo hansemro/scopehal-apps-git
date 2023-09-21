@@ -22,10 +22,10 @@ pkgver() {
 }
 
 prepare() {
-    patch "$srcdir/scopehal-apps/.gitmodules" modules.patch
+    patch -Nu "$srcdir/scopehal-apps/.gitmodules" modules.patch || true
 	cd "$srcdir/scopehal-apps"
 	git submodule update --init --recursive
-    patch -p1 < "$srcdir"/target_link_libraries.patch
+    patch -Nup1 -i "$srcdir"/target_link_libraries.patch || true
 }
 
 build() {
