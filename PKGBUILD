@@ -7,7 +7,7 @@ arch=('x86_64')
 url="https://github.com/glscopeclient/scopehal-apps"
 license=('BSD')
 groups=()
-depends=('gtkmm3' 'libsigc++' 'ffts' 'openmp' 'glfw' 'libvulkan.so' 'yaml-cpp' 'glew' 'catch2' 'spirv-tools' 'shaderc' 'liblxi' 'linux-gpib')
+depends=('gtkmm3' 'libsigc++' 'ffts' 'openmp' 'glfw' 'libvulkan.so' 'yaml-cpp' 'glew' 'catch2' 'spirv-tools' 'shaderc' 'liblxi' 'libtirpc' 'linux-gpib')
 makedepends=('cmake' 'git' 'vulkan-headers')
 source=("git+https://github.com/glscopeclient/scopehal-apps.git"
         "git+https://github.com/glscopeclient/scopehal.git"
@@ -34,7 +34,7 @@ sha256sums=('SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
-            '39459c2f5b67968ca9b743e335026dc280e340ed6e3e4091ac26afd7d709f290')
+            'b8d421b77c84f86158cc9f6c2d623f0bd2a61aea66cb01f715ee5f36e4d1c61d')
 
 pkgver() {
   cd "${srcdir}/scopehal-apps"
@@ -68,7 +68,7 @@ prepare() {
     git config submodule.VkFFT.url "$srcdir/VkFFT"
     git -c protocol.file.allow=always submodule update
 
-    echo "Patch to locate SPIRV tools"
+    echo "Patching to link SPIRV tools and libtirpc"
     cd "$srcdir/scopehal-apps"
     patch -Nup1 -i "$srcdir"/target_link_libraries.patch || true
 }

@@ -20,6 +20,7 @@ pkgbase = scopehal-apps-git
 	depends = spirv-tools
 	depends = shaderc
 	depends = liblxi
+	depends = libtirpc
 	depends = linux-gpib
 	source = git+https://github.com/glscopeclient/scopehal-apps.git
 	source = git+https://github.com/glscopeclient/scopehal.git
@@ -46,6 +47,6 @@ pkgbase = scopehal-apps-git
 	sha256sums = SKIP
 	sha256sums = SKIP
 	sha256sums = SKIP
-	sha256sums = 39459c2f5b67968ca9b743e335026dc280e340ed6e3e4091ac26afd7d709f290
+	sha256sums = b8d421b77c84f86158cc9f6c2d623f0bd2a61aea66cb01f715ee5f36e4d1c61d
 
 pkgname = scopehal-apps-git
