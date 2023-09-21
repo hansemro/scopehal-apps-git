@@ -1,6 +1,23 @@
 --- a/lib/scopehal/CMakeLists.txt
 +++ b/lib/scopehal/CMakeLists.txt
-@@ -186,6 +186,9 @@ target_link_libraries(scopehal
+@@ -2,6 +2,7 @@ include_directories(SYSTEM ${GTKMM_INCLUDE_DIRS} ${SIGCXX_INCLUDE_DIRS})
+ link_directories(${GTKMM_LIBRARY_DIRS} ${SIGCXX_LIBRARY_DIRS})
+ 
+ find_library(LXI_LIB lxi)
++find_library(TIRPC_LIB tirpc)
+ find_library(LINUXGPIB_LIB gpib)
+ find_package(glfw3 REQUIRED)
+ 
+@@ -25,7 +26,7 @@ endif()
+ 
+ if(LXI_LIB)
+ 	set(HAS_LXI true)
+-	set(LXI_LIBRARIES ${LXI_LIB})
++	set(LXI_LIBRARIES ${LXI_LIB} ${TIRPC_LIB})
+ else()
+ 	set(HAS_LXI false)
+ 	set(LXI_LIBRARIES "")
+@@ -240,6 +241,9 @@ target_link_libraries(scopehal
  	${LIBFFTS_LIBRARIES}
  	${OpenMP_CXX_LIBRARIES}
  	${Vulkan_LIBRARIES}

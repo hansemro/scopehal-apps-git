@@ -14,7 +14,7 @@ source=("git+https://github.com/glscopeclient/scopehal-apps.git"
         "target_link_libraries.patch")
 sha256sums=('SKIP'
             '7a8303cde3b76f012e54e5e0944590a8ffcca4d0481c250534c7b76e1e2233be'
-            '39459c2f5b67968ca9b743e335026dc280e340ed6e3e4091ac26afd7d709f290')
+            'b8d421b77c84f86158cc9f6c2d623f0bd2a61aea66cb01f715ee5f36e4d1c61d')
 
 pkgver() {
   cd "${srcdir}/scopehal-apps"
