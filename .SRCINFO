@@ -1,6 +1,6 @@
 pkgbase = scopehal-apps-git
 	pkgdesc = glscopeclient and other client applications for libscopehal
-	pkgver = 0.0.f18ad75
+	pkgver = 0.0.bf81dbc
 	pkgrel = 1
 	url = https://github.com/glscopeclient/scopehal-apps
 	arch = x86_64
@@ -25,7 +25,7 @@ pkgbase = scopehal-apps-git
 	source = modules.patch
 	source = target_link_libraries.patch
 	sha256sums = SKIP
-	sha256sums = afcabed21ee30a3b08b86c452e09f964632f9ac2a2ce6d9eeea430c3060748af
+	sha256sums = 7a8303cde3b76f012e54e5e0944590a8ffcca4d0481c250534c7b76e1e2233be
 	sha256sums = 39459c2f5b67968ca9b743e335026dc280e340ed6e3e4091ac26afd7d709f290
 
 pkgname = scopehal-apps-git
