@@ -2,7 +2,7 @@
 pkgname=scopehal-apps-git
 pkgver=0.0.2c2634b
 pkgrel=1
-pkgdesc="glscopeclient and other client applications for libscopehal"
+pkgdesc="ngscopeclient and other client applications for libscopehal"
 arch=('x86_64')
 url="https://github.com/glscopeclient/scopehal-apps"
 license=('BSD')
