@@ -7,7 +7,9 @@ arch=('x86_64')
 url="https://github.com/glscopeclient/scopehal-apps"
 license=('BSD')
 groups=()
-depends=('gtkmm3' 'libsigc++' 'ffts' 'openmp' 'glfw' 'libvulkan.so' 'yaml-cpp' 'glew' 'catch2' 'spirv-tools' 'shaderc')
+depends=('gtkmm3' 'libsigc++' 'ffts' 'openmp' 'glfw' 'libvulkan.so' 'yaml-cpp' 'glew' 'catch2' 'spirv-tools' 'shaderc'
+        'texlive-latex' 'texlive-latexrecommended' 'texlive-binextra' 'texlive-latexextra'
+        'texlive-fontsextra' 'texlive-luatex' 'texlive-plaingeneric')
 optdepends=('liblxi' 'libtirpc' 'linux-gpib')
 makedepends=('cmake' 'git' 'vulkan-headers')
 source=("git+https://github.com/glscopeclient/scopehal-apps.git"
@@ -80,8 +82,8 @@ build() {
     cd build
     cmake .. \
       -DCMAKE_BUILD_TYPE=RELEASE \
-      -DCMAKE_INSTALL_PREFIX=/usr
-      # -DBUILD_DOCS=ON
+      -DCMAKE_INSTALL_PREFIX=/usr \
+      -DBUILD_DOCS=ON
     make
 }
 
