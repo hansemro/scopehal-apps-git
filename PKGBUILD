@@ -1,6 +1,6 @@
 
 pkgname=scopehal-apps-git
-pkgver=0.0.bf81dbc
+pkgver=0.0.2c2634b
 pkgrel=1
 pkgdesc="glscopeclient and other client applications for libscopehal"
 arch=('x86_64')
@@ -35,7 +35,7 @@ sha256sums=('SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
-            'b8d421b77c84f86158cc9f6c2d623f0bd2a61aea66cb01f715ee5f36e4d1c61d')
+            '106a6a1873bbb8e0038e461f9be457c96c756f8e008a95729d3f5fbcaf8cc856')
 
 pkgver() {
   cd "${srcdir}/scopehal-apps"
