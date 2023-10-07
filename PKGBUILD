@@ -8,7 +8,9 @@ url="https://github.com/glscopeclient/scopehal-apps"
 license=('BSD')
 groups=()
 depends=('gtkmm3' 'libsigc++' 'ffts' 'openmp' 'glfw' 'libvulkan.so' 'yaml-cpp' 'glew' 'catch2' 'spirv-tools' 'shaderc')
-optdepends=('liblxi' 'libtirpc' 'linux-gpib')
+optdepends=('liblxi: LXI transport support'
+            'libtirpc: LXI transport dependency'
+            'linux-gpib: GPIB transport support')
 makedepends=('cmake' 'git' 'vulkan-headers')
 source=("git+https://github.com/glscopeclient/scopehal-apps.git"
         "git+https://github.com/glscopeclient/scopehal.git"
