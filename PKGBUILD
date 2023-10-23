@@ -1,6 +1,6 @@
 
 pkgname=scopehal-apps-git
-pkgver=0.0.2c2634b
+pkgver=0.0.a00dc9c
 pkgrel=1
 pkgdesc="ngscopeclient and other client applications for libscopehal"
 arch=('x86_64')
@@ -16,7 +16,6 @@ source=("git+https://github.com/glscopeclient/scopehal-apps.git"
         "git+https://github.com/glscopeclient/scopehal.git"
         "git+https://github.com/glscopeclient/xptools.git"
         "git+https://github.com/glscopeclient/logtools.git"
-        "git+https://github.com/glscopeclient/graphwidget.git"
         "git+https://github.com/glscopeclient/VkFFT.git"
         "git+https://github.com/glscopeclient/scopehal-docs.git"
         "git+https://github.com/ocornut/imgui.git"
@@ -26,7 +25,6 @@ source=("git+https://github.com/glscopeclient/scopehal-apps.git"
         "git+https://github.com/btzy/nativefiledialog-extended"
         "target_link_libraries.patch")
 sha256sums=('SKIP'
-            'SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
@@ -67,7 +65,6 @@ prepare() {
     git submodule init
     git config submodule.xptools.url "$srcdir/xptools"
     git config submodule.log.url "$srcdir/logtools"
-    git config submodule.graphwidget.url "$srcdir/graphwidget"
     git config submodule.VkFFT.url "$srcdir/VkFFT"
     git -c protocol.file.allow=always submodule update
 
