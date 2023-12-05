@@ -1,10 +1,10 @@
 
 pkgname=scopehal-apps-git
-pkgver=0.0.a00dc9c
+pkgver=0.0.db900ad
 pkgrel=1
 pkgdesc="ngscopeclient and other client applications for libscopehal"
 arch=('x86_64')
-url="https://github.com/glscopeclient/scopehal-apps"
+url="https://github.com/ngscopeclient/scopehal-apps"
 license=('BSD')
 groups=()
 depends=('gtkmm3' 'libsigc++' 'ffts' 'openmp' 'glfw' 'libvulkan.so' 'yaml-cpp' 'glew' 'catch2' 'spirv-tools' 'shaderc')
@@ -12,15 +12,15 @@ optdepends=('liblxi: LXI transport support'
             'libtirpc: LXI transport dependency'
             'linux-gpib: GPIB transport support')
 makedepends=('cmake' 'git' 'vulkan-headers')
-source=("git+https://github.com/glscopeclient/scopehal-apps.git"
-        "git+https://github.com/glscopeclient/scopehal.git"
-        "git+https://github.com/glscopeclient/xptools.git"
-        "git+https://github.com/glscopeclient/logtools.git"
-        "git+https://github.com/glscopeclient/VkFFT.git"
-        "git+https://github.com/glscopeclient/scopehal-docs.git"
-        "git+https://github.com/ocornut/imgui.git"
-        "git+https://github.com/glscopeclient/implot.git"
-        "git+https://github.com/glscopeclient/imgui-node-editor.git"
+source=("git+https://github.com/ngscopeclient/scopehal-apps.git"
+        "git+https://github.com/ngscopeclient/scopehal.git"
+        "git+https://github.com/ngscopeclient/xptools.git"
+        "git+https://github.com/ngscopeclient/logtools.git"
+        "git+https://github.com/ngscopeclient/VkFFT.git"
+        "git+https://github.com/ngscopeclient/scopehal-docs.git"
+        "git+https://github.com/ngscopeclient/imgui.git"
+        "git+https://github.com/ngscopeclient/implot.git"
+        "git+https://github.com/ngscopeclient/imgui-node-editor.git"
         "git+https://github.com/aiekick/ImGuiFileDialog"
         "git+https://github.com/btzy/nativefiledialog-extended"
         "target_link_libraries.patch")
