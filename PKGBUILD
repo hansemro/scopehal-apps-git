@@ -1,6 +1,6 @@
-
+# Contributor: Hansem Ro <hansemro at outlook com>
 pkgname=scopehal-apps-git
-pkgver=0.0.db900ad
+pkgver=0.0.43c2478
 pkgrel=1
 pkgdesc="ngscopeclient and other client applications for libscopehal"
 arch=('x86_64')
@@ -21,10 +21,12 @@ source=("git+https://github.com/ngscopeclient/scopehal-apps.git"
         "git+https://github.com/ngscopeclient/imgui.git"
         "git+https://github.com/ngscopeclient/implot.git"
         "git+https://github.com/ngscopeclient/imgui-node-editor.git"
+        "git+https://github.com/juliettef/imgui_markdown.git"
         "git+https://github.com/aiekick/ImGuiFileDialog"
         "git+https://github.com/btzy/nativefiledialog-extended"
         "target_link_libraries.patch")
 sha256sums=('SKIP'
+            'SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
@@ -54,6 +56,7 @@ prepare() {
     git config submodule.src/imgui.url "$srcdir/imgui"
     git config submodule.src/implot.url "$srcdir/implot"
     git config submodule.src/imgui-node-editor.url "$srcdir/imgui-node-editor"
+    git config submodule.src/imgui_markdown.url "$srcdir/imgui_markdown"
     git config submodule.src/ImGuiFileDialog.url "$srcdir/ImGuiFileDialog"
     git config submodule.src/nativefiledialog-extended.url "$srcdir/nativefiledialog-extended"
 
